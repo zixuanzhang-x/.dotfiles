@@ -70,8 +70,13 @@ nnoremap \\ :noh<return> " Clear highlights on pressing \ (backslash) twice
 " being searched are lowercase. However, the search becomes case-sensitive if
 " it contains any capital letters. This makes searching more convenient.
 set smartcase
-
 " }}}
+
+nnoremap <leader><Bar> :vsplit<CR>
+nnoremap <leader>- :split<CR>
+
+" nnoremap <leader>+ :vertical resize +5<CR>
+" nnoremap <leader>- :vertical resize -5<CR>
 
 " Get a block cursor in normal mode and a thin one in insert mode {{{
 if has("autocmd")
@@ -228,8 +233,8 @@ nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 " nnoremap <Up>    :echoe "Use k"<CR>
 " nnoremap <Down>  :echoe "Use j"<CR>
-map <Down> <c-e>
-map <Up> <c-y>
+map <Down> <C-e>
+map <Up> <C-y>
 " ...and in insert mode
 inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
