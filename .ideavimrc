@@ -1,0 +1,2 @@
+" map j + j to <ESC> in insert mode
+inoremap jj <ESC>
