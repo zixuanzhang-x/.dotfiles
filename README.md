@@ -26,3 +26,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 Install [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 Install coc and language extensions
 https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
+
+
+TLDR
