@@ -48,14 +48,14 @@ set mouse+=a
 " => User interface
 "------------------------------------------------------------
 " UI Layout {{{
-set number                " show line number
+set number              " show line number
 " set numberwidth=5
 set relativenumber
 
 set showcmd             " show command in bottom bar
 set nocursorline        " highlight current line
-set wildmenu " Enhance command-line completion
-" set lazyredraw " Don't redraw while executing macros (good performance config)
+set wildmenu            " Enhance command-line completion
+" set lazyredraw          " Don't redraw while executing macros (good performance config)
 " set showmatch           " higlight matching parenthesis
 " set fillchars+=vert:┃
 " }}}
@@ -114,7 +114,6 @@ Plug 'morhetz/gruvbox'   " color theme
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes' " status bar theme
 Plug 'terryma/vim-smooth-scroll'
-Plug 'ycm-core/YouCompleteMe'
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
@@ -148,10 +147,7 @@ call plug#end() " Initialize plugin system
 " }}}
 
 " Use enter to accept a suggestion from YouCompleteMe
-let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
-nnoremap gt :YcmCompleter GoTo<CR>
 nnoremap gt :call CocActionAsync('jumpDefinition')<CR>
-nnoremap gd :YcmCompleter GetDoc<CR>
 nnoremap gd :call CocActionAsync('doHover')<CR>
 
 " nerdtree configuration
@@ -207,11 +203,11 @@ set undofile
 set tabstop=4       " 4 space tab
 set softtabstop=4   " 4 space tab
 set shiftwidth=4
-set expandtab               " use spaces for tab
+set expandtab       " use spaces for tab
 set smarttab
 set autoindent 
 set smartindent
-set wrap   " wrap lines
+set wrap            " wrap lines
 " set nowrap " or not
 " set modelines=1
 " filetype indent on
