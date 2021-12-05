@@ -3,6 +3,7 @@
 "------------------------------------------------------------
 let mapleader = " "  " set learder key
 
+set number
 set relativenumber
 
 nnoremap <leader><Bar> :vsplit<CR>
