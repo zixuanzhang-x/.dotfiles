@@ -115,7 +115,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes' " status bar theme
 Plug 'terryma/vim-smooth-scroll'
 " Use release branch (recommend)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons' " dds filetype-specific icons to NERDTree files and folders
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " Adds syntax highlighting to NERDTree based on filetype
