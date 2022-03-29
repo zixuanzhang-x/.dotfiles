@@ -1,9 +1,45 @@
 # Zixuan Zhang's dotfiles
-[vimrc turorial](https://github.com/romainl/idiomatic-vimrc)
+## Terminal Setup
+1. Create a `Projects` directory and clone this repo in it:
+    ```shell
+    mkdir Projects
+    ```
+2. Create symbolic links:
+    ```shell
+    ln -s ~/Projects/.dotfiles/.vimrc .vimrc
+    ln -s ~/Projects/.dotfiles/.ideavimrc .ideavimrc
+    ln -s ~/Projects/.dotfiles/.tmux.conf .tmux.conf
+    ln -s ~/Projects/.dotfiles/.zshrc .zshrc
+    ```
+3. Install zsh plugins and libraries:
+    ```shell
+    # homebrew
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-create .vim/undodir
+    # neofetch
+    brew install neofetch
+
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    ```
+4. Install powerlevel10k:
+    ```shell
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    ```
+5. Suppresss powerlevel10k console output warining:
+    ```shell
+    vim ~/.p10k.zsh
+    # change the following
+    typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+    ```
+5. Install [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes):
+    1. Download repo as a zip and unzip it
+    2. In iTerm2 preferences, Profiles -> Colors -> Color Presets... -> import the schemes folder of the repo
 
 ## [vim-plug](https://github.com/junegunn/vim-plug)
+[vimrc turorial](https://github.com/romainl/idiomatic-vimrc)
+create .vim/undodir
 [tips](https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation)
 Vim Unix
 ```bash
