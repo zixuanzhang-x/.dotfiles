@@ -114,14 +114,19 @@ source $ZSH/oh-my-zsh.sh
 alias d="docker"
 alias dc="docker compose"
 
+# k8s
 source <(kubectl completion zsh)
-
 # https://github.com/ahmetb/kubectl-aliases
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
-function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
+# function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
 
+# exports
+export EDITOR=vim
 
-neofetch
+# go
+export GOPROXY=direct
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
