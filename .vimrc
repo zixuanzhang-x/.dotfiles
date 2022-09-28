@@ -1,5 +1,5 @@
 "------------------------------------------------------------
-" Author: Zixuan Zhang — @zixuanzhang98
+" Author: Zixuan Zhang — @zixuanzhang-x
 "
 " Sections:
 "     General
@@ -240,8 +240,8 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " remap VIM 0 to first non-blank character
 map 0 ^
 
-" map j + j to <ESC> in insert mode
-inoremap jj <ESC>
+" map j + k to <ESC> in insert mode
+inoremap jk <ESC>
 
 " use space + h/j/k/l to switch panel
 nnoremap <leader>h :wincmd h<CR>
