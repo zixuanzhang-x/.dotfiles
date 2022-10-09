@@ -109,9 +109,17 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias gs="git status"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# neovim aliases
+alias nv="nvim"
+alias vim="nvim"
+
+# git aliases
+alias gs="git status"
+
+# docker aliases
 alias d="docker"
 alias dc="docker compose"
 
@@ -122,12 +130,16 @@ source <(kubectl completion zsh)
 # function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
 
 # exports
-export EDITOR=vim
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # go
 export GOPROXY=direct
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# tool-sync
+export PATH=$PATH:$HOME/.toolsync/bin
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
