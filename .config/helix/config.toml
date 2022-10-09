@@ -1,0 +1,15 @@
+theme = "everforest_dark"
+
+[editor]
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+# select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.insert]
+j = { j = "normal_mode" } # Maps `jj` to exit insert mode
