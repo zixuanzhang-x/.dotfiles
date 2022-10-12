@@ -1,3 +1,5 @@
+-- Bind options
+local bind = vim.keymap.set
 -- ========================================================================== --
 -- ==                             KEYBINDINGS                              == --
 -- ========================================================================== --
@@ -6,18 +8,18 @@
 vim.g.mapleader = ' '
 
 -- Shortcuts
-vim.keymap.set({'n', 'x', 'o'}, '<leader>h', '^')
-vim.keymap.set({'n', 'x', 'o'}, '<leader>l', 'g_')
-vim.keymap.set('n', '<leader>a', ':keepjumps normal! ggVG<cr>')
+bind({'n', 'x', 'o'}, '<leader>h', '^')
+bind({'n', 'x', 'o'}, '<leader>l', 'g_')
+bind('n', '<leader>a', ':keepjumps normal! ggVG<cr>')
 
 -- Basic clipboard interaction
-vim.keymap.set({'n', 'x'}, 'cp', '"+y')
-vim.keymap.set({'n', 'x'}, 'cv', '"+p')
+bind({'n', 'x'}, 'cp', '"+y')
+bind({'n', 'x'}, 'cv', '"+p')
 
 -- Delete text
-vim.keymap.set({'n', 'x'}, 'x', '"_x')
+bind({'n', 'x'}, 'x', '"_x')
 
 -- Commands
-vim.keymap.set('n', '<leader>w', '<cmd>write<cr>')
-vim.keymap.set('n', '<leader>bq', '<cmd>bdelete<cr>')
-vim.keymap.set('n', '<leader>bl', '<cmd>buffer #<cr>')
+bind('n', '<leader>w', '<cmd>write<cr>')
+bind('n', '<leader>bq', '<cmd>bdelete<cr>')
+bind('n', '<leader>bl', '<cmd>buffer #<cr>')
