@@ -8,8 +8,20 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/zixuanzhang/.oh-my-zsh"
+case `uname` in
+  Darwin)
+    # commands for OS X go here
+    # Path to your oh-my-zsh installation.
+    export ZSH="/Users/zixuanzhang/.oh-my-zsh"
+  ;;
+  Linux)
+    # commands for Linux go here
+    export ZSH="/home/zixuanzhang/.oh-my-zsh"
+  ;;
+  FreeBSD)
+    # commands for FreeBSD go here
+  ;;
+esac
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -102,6 +114,23 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+
+# OS Specific Settings
+case `uname` in
+  Darwin)
+    # commands for OS X go here
+    # lunar vim
+    export PATH="/Users/zixuanzhang/.local/bin:${PATH}"
+  ;;
+  Linux)
+    # lunar vim
+    export PATH="/home/zixuanzhang/.local/bin:${PATH}"
+    # commands for Linux go here
+  ;;
+  FreeBSD)
+    # commands for FreeBSD go here
+  ;;
+esac
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
