@@ -9,6 +9,7 @@ an executable
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
+vim.opt.winbar = "%f"
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "gruvbox-material"
@@ -19,7 +20,7 @@ lvim.builtin.lualine.style = "default"
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+-- lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
@@ -164,7 +165,13 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.plugins = {
   -- color themes: https://github.com/rockerBOO/awesome-neovim#colorscheme
   { "marko-cerovac/material.nvim" },
-  { "sainnhe/gruvbox-material" }
+  { "sainnhe/gruvbox-material" },
+
+  -- { "fgheng/winbar.nvim",
+  --   config = function()
+  --     require("winbar").setup()
+  --   end,
+  -- }
   -- {
   --   "folke/trouble.nvim",
   --   cmd = "TroubleToggle",
