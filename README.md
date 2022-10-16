@@ -64,4 +64,10 @@ Install coc and language extensions
 https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
 
 
-TLDR
+
+## Neovim
+You can follow the neovim tutorial with: `nvim +Tutor`
+
+### Resources
+https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/
+https://vonheikemen.github.io/devlog/tools/build-your-first-lua-config-for-neovim/
