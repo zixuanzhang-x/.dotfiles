@@ -138,6 +138,9 @@ export GOPROXY=direct
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# lunar vim
+export PATH="/Users/zixuanzhang/.local/bin:${PATH}"
+
 # tool-sync
 export PATH=$PATH:$HOME/.toolsync/bin
 
