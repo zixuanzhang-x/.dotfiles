@@ -8,16 +8,16 @@ local bind = vim.keymap.set
 vim.g.mapleader = ' '
 
 -- Shortcuts
-bind({'n', 'x', 'o'}, '<leader>h', '^')
-bind({'n', 'x', 'o'}, '<leader>l', 'g_')
+-- bind({'n', 'x', 'o'}, '<leader>h', '^')
+-- bind({'n', 'x', 'o'}, '<leader>l', 'g_')
 bind('n', '<leader>a', ':keepjumps normal! ggVG<cr>')
 
 -- Basic clipboard interaction
-bind({'n', 'x'}, 'cp', '"+y')
-bind({'n', 'x'}, 'cv', '"+p')
+bind({ 'n', 'x' }, 'cp', '"+y')
+bind({ 'n', 'x' }, 'cv', '"+p')
 
 -- Delete text
-bind({'n', 'x'}, 'x', '"_x')
+bind({ 'n', 'x' }, 'x', '"_x')
 
 -- Commands
 bind('n', '<leader>w', '<cmd>write<cr>')

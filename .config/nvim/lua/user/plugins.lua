@@ -29,6 +29,7 @@ require('packer').startup(function(use)
 
   -- File explorer
   use { 'kyazdani42/nvim-tree.lua' }
+  use { 'fgheng/winbar.nvim' }
 
   -- Fuzzy finder
   use { 'nvim-telescope/telescope.nvim' }
@@ -232,6 +233,10 @@ require('nvim-tree').setup({
 
 vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 
+---
+-- winbar
+---
+require('winbar').setup()
 
 ---
 -- toggleterm
