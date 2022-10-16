@@ -7,3 +7,9 @@ store_directory = "~/.toolsync/bin"
 [exa]
 [fd]
 [ripgrep]
+
+[gitui]
+owner = "extrawurst"
+repo = "gitui"
+exe_name = "gitui"
+asset_name.macos = "mac.tar.gz"
