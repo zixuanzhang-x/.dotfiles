@@ -116,9 +116,6 @@ source $ZSH/oh-my-zsh.sh
 alias nv="nvim"
 alias vim="nvim"
 
-# git aliases
-alias gs="git status"
-
 # docker aliases
 alias d="docker"
 alias dc="docker compose"
