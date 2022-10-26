@@ -13,3 +13,9 @@ owner = "extrawurst"
 repo = "gitui"
 exe_name = "gitui"
 asset_name.macos = "mac.tar.gz"
+
+[jwt-cli]
+owner = "mike-engel"
+repo = "jwt-cli"
+exe_name = "jwt"
+asset_name.macos = "macOS.tar.gz"
