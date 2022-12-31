@@ -137,8 +137,6 @@ local config = {
 
   -- Extend LSP configuration
   lsp = {
-    skip_setup = { "rust_analyzer" }, -- skip lsp setup because rust-tools will do it itself
-
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
@@ -220,26 +218,6 @@ local config = {
   -- Configure plugins
   plugins = {
     init = {
-      -- {'simrat39/inlay-hints.nvim'},
-      {
-        "simrat39/rust-tools.nvim",
-        after = "mason-lspconfig.nvim", -- make sure to load after mason-lspconfig
-        config = function()
-          -- local ih = require("inlay-hints")
-
-          require("rust-tools").setup {
-            -- tools = {
-            --   on_initialized = function()
-            --     ih.set_all()
-            --   end,
-            --   inlay_hints = {
-            --     auto = false,
-            --   },
-            -- },
-            server = astronvim.lsp.server_settings "rust_analyzer", -- get the server settings and built in capabilities/on_attach
-          }
-        end,
-      },
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disable = true },
 
@@ -282,7 +260,6 @@ local config = {
     },
     -- use mason-lspconfig to configure LSP installations
     ["mason-lspconfig"] = { -- overrides `require("mason-lspconfig").setup(...)`
-      ensure_installed = { "rust_analyzer" }, -- install rust_analyzer
       -- ensure_installed = { "sumneko_lua" },
     },
     -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
@@ -368,7 +345,7 @@ local config = {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-    -- vim.lsp.buf.hover()
+    vim.lsp.buf.hover()
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
