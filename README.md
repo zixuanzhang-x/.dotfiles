@@ -1,4 +1,4 @@
-# Zixuan Zhang's dotfiles
+# Zi Xuan Zhang's dotfiles
 ## Terminal Setup
 1. Create a `Projects` directory and clone this repo in it:
     ```shell
